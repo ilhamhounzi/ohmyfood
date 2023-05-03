@@ -1,0 +1,191 @@
+.location {
+    @include flex-row;
+    @include position-center;
+    background: $light-grey;
+    gap: 17px;
+    padding: 1.2rem;
+    h4 {
+        color: $dark-grey;
+    }
+}
+
+.explore {
+    background: $grey-explore;
+    @include text-center;
+    @include position-center;
+
+    h2 {
+        line-height: 32px;
+        padding-top: 2rem;
+    }
+    p {
+        line-height: 23px;
+        @include text-center;
+        color: $dark-grey;
+    }
+
+    button {
+        height: 50px;
+        width: 219px;
+        background: linear-gradient(
+            to top,
+            rgba(147, 86, 270, 09),
+            rgba(255, 121, 218, 0.9)
+        );
+        border-radius: 25px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border: none;
+        cursor: pointer;
+        color: $white;
+        @include position-center;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-size: 16px;
+        &:hover {
+            background: linear-gradient(
+                to top,
+                rgba(147, 86, 270, 07),
+                rgba(255, 121, 218, 0.8)
+            );
+        }
+    }
+}
+
+.maincontent {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+}
+
+.function {
+    h2 {
+        padding: 2rem 1rem;
+    }
+    &__btn {
+        color: $black;
+        margin-top: 1rem;
+        padding: 1.5rem 2rem;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        align-items: center;
+        background: $dark-white;
+    }
+
+    ol {
+        @include flex-column;
+        gap: 1rem;
+        counter-reset: numberlist;
+        padding: 0 1rem 4rem 1.7rem;
+    }
+
+    li {
+        display: flex;
+        counter-increment: numberlist;
+        @include relative;
+        list-style-type: none;
+        background-color: $dark-white;
+        padding: 1.5rem 2rem;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+        &::before {
+            display: grid;
+            @include absolute;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: $primary-color;
+            left: -0.7rem;
+            @include position-center;
+            content: counter(numberlist);
+            color: $white;
+        }
+    }
+
+    i {
+        margin-right: 1rem;
+        font-size: 16px;
+    }
+    .grey {
+        color: grey;
+    }
+
+    .violet {
+        color: $primary-color;
+    }
+}
+
+.restaurants {
+    background-color: $grey-explore;
+    padding: 2rem 1rem;
+
+    &-cards {
+        @include flex-column;
+        gap: 1rem;
+        padding: 2rem 0;
+    }
+    &__card {
+        background: $white;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+
+        img {
+            object-fit: cover;
+            background-size: cover;
+            height: 200px;
+            width: 100%;
+            border-radius: 15px 15px 0px 0px;
+        }
+    }
+    &__card--txt {
+        @include relative;
+        padding: 0.7rem;
+        h3,
+        p {
+            margin: 0.25rem;
+        }
+        .fa-heart {
+            font-size: 22px;
+            @include absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .fas {
+            color: transparent;
+            background-image: linear-gradient(
+                to top,
+                $primary-color,
+                $secondary-color
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: all 500ms ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .new {
+            @include relative;
+
+            &::before {
+                content: "Nouveau";
+                @include absolute;
+                height: 2rem;
+                width: 5rem;
+                background-color: $tertiary-color;
+                color: #008766;
+                font-weight: 500;
+                font-size: 14px;
+                display: grid;
+                place-items: center;
+                right: 1rem;
+                top: 1rem;
+            }
+        }
+    }
+}

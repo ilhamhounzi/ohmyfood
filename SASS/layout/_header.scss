@@ -1,0 +1,17 @@
+.header {
+    background-color: $white;
+    @include flex-row;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+    padding: 1.1rem;
+    @include position-center;
+
+    & img {
+        @include position-center;
+        object-fit: cover;
+        max-width: 162px;
+    }
+    &__logo {
+        @include position-center;
+        @include relative;
+    }
+}

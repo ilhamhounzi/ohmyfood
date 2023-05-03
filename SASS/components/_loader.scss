@@ -1,0 +1,37 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: $white;
+    opacity: 0.6;
+    animation: disappear 2s forwards;
+    z-index: 1;
+    inset: 0;
+    pointer-events: none;
+    animation-delay: 200ms;
+
+    &-icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 7px solid $black;
+        border-right: 7px solid $white;
+        animation: spin 700ms infinite;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

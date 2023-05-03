@@ -1,0 +1,26 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 20px;
+    gap: 16px;
+    background: $dark-grey;
+    color: $white;
+
+    span {
+        color: $white;
+    }
+
+    a {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    i {
+        width: 27px;
+    }
+    li {
+        line-height: 30px;
+    }
+}

@@ -1,0 +1,196 @@
+.header {
+    &__btn {
+        & .fa-arrow-left {
+            @include pointer;
+            @include absolute;
+            left: 23px;
+            top: 23px;
+            color: $dark-grey;
+            font-size: 18px;
+            height: 16px;
+        }
+    }
+}
+
+.banner {
+    img {
+        width: 100%;
+        height: 275px;
+        object-position: center bottom;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.menu {
+    background: $dark-white;
+    border-radius: 40px 40px 0px 0px;
+    margin-top: -3.3rem;
+    position: sticky;
+    padding: 2rem 1rem;
+
+    .menu__title {
+        padding-bottom: 2rem;
+        @include flex-row;
+
+        font-style: italic;
+        font-weight: 400;
+        font-size: 28px;
+        font-family: "Shrikhand", cursive;
+
+        & i {
+            font-size: 22px;
+            @include absolute;
+            right: 16px;
+            @include pointer;
+        }
+
+        & .fas {
+            color: transparent;
+            background-image: linear-gradient(
+                to top,
+                $primary-color,
+                $secondary-color
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: all 500ms ease-in-out;
+        }
+        & .fas:hover {
+            opacity: 1;
+        }
+    }
+
+    .section__menu {
+        gap: 1rem;
+        @include flex-column;
+        padding-bottom: 2rem;
+
+        h3 {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            border-bottom: 3px solid $tertiary-color;
+            padding-bottom: 0.5rem;
+            text-transform: uppercase;
+            width: 40px;
+        }
+
+        .card {
+            background: $white;
+            box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            @include pointer;
+            h4 {
+                font-family: "Roboto";
+                font-style: normal;
+                font-weight: 500;
+                margin: 0;
+                font-size: 18px;
+                padding: 0.3rem 0;
+            }
+
+            p {
+                font-family: "Roboto";
+                font-style: normal;
+                font-weight: 300;
+                font-size: 15px;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+    .card__item {
+        display: flex;
+        overflow: hidden;
+        &--description {
+            white-space: nowrap;
+            overflow: hidden;
+            h4,
+            p {
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+        &--description,
+        span {
+            padding: 1rem;
+        }
+        &--price {
+            display: flex;
+            align-items: end;
+            margin-left: auto;
+            font-weight: 900;
+            padding: 1rem;
+            font-size: 15px;
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+        }
+
+        &--check {
+            background: $tertiary-color;
+            align-items: center;
+            display: grid;
+            border-radius: 0px 15px 15px 0px;
+            margin-right: -4rem;
+            width: 4rem;
+            transition: margin-right 500ms;
+
+            & .fa-solid {
+                color: $tertiary-color;
+                background-color: $white;
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+                width: 2rem;
+                font-size: 14px;
+                font-weight: 900;
+                justify-self: center;
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &:active .card__item--check {
+            margin-right: 0;
+        }
+    }
+    .btn__order {
+        align-content: center;
+    }
+}
+
+.order {
+    display: flex;
+    justify-content: center;
+
+    &__btn {
+        background: linear-gradient(
+            193.33deg,
+            $primary-color -11.44%,
+            $secondary-color 123.93%
+        );
+        font-weight: 500;
+        font-size: 16px;
+        @include text-center;
+        border: none;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+        color: $white;
+        width: 8.7vh;
+        height: 3.1rem;
+        cursor: pointer;
+        &:hover {
+            background: linear-gradient(
+                to right top,
+                #9356dc,
+                #b35cdc,
+                #cf64dc,
+                #e86edb,
+                #ff79da
+            );
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
