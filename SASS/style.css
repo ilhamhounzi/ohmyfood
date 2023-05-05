@@ -519,14 +519,18 @@ span {
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
-  -webkit-animation: appearance 1s forwards;
-          animation: appearance 1s forwards;
-  animation: appearance 1s forwards;
-  animation: appearance 1s forwards;
+  -webkit-animation: appearance 2s;
+          animation: appearance 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  animation: appearance 2s;
+  animation-fill-mode: both;
+  animation: appearance 2s;
+  animation-fill-mode: both;
 }
 .section__menu:nth-last-child(-n+2) {
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 @-webkit-keyframes appearance {
   0% {
@@ -576,8 +580,8 @@ span {
   padding: 0;
 }
 .section__menu:nth-last-child(-n+2) {
-  -webkit-animation-delay: 1000ms;
-          animation-delay: 1000ms;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 @keyframes appearance {
   0% {
@@ -619,8 +623,8 @@ span {
   padding: 0;
 }
 .section__menu:nth-last-child(-n+2) {
-  -webkit-animation-delay: 1500ms;
-          animation-delay: 1500ms;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 @keyframes appearance {
   0% {
