@@ -28,45 +28,53 @@
     margin-top: -3.3rem;
     position: sticky;
     padding: 2rem 1rem;
+}
+.menu__title {
+    padding-bottom: 2rem;
+    @include flex-row;
+    font-weight: 400;
+    font-size: 28px;
+    font-family: "Shrikhand", cursive;
 
-    .menu__title {
-        padding-bottom: 2rem;
-        @include flex-row;
-
-        font-style: italic;
-        font-weight: 400;
-        font-size: 28px;
-        font-family: "Shrikhand", cursive;
-
-        & i {
-            font-size: 22px;
-            @include absolute;
-            right: 16px;
-            @include pointer;
-        }
-
-        & .fas {
-            color: transparent;
-            background-image: linear-gradient(
-                to top,
-                $primary-color,
-                $secondary-color
-            );
-            background-clip: text;
-            -webkit-background-clip: text;
-            opacity: 0;
-            transition: all 500ms ease-in-out;
-        }
-        & .fas:hover {
-            opacity: 1;
-        }
+    & i {
+        font-size: 22px;
+        @include absolute;
+        right: 17px;
+        @include pointer;
+        width: 35px;
+        border-width: 1px;
     }
 
-    .section__menu {
-        gap: 1rem;
-        @include flex-column;
-        padding-bottom: 2rem;
+    & .fas {
+        color: transparent;
+        background: $background-btn;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 500ms ease-in-out;
+    }
+    & .fas:hover {
+        opacity: 1;
+    }
+}
 
+.section__menu {
+    gap: 1rem;
+    @include flex-column;
+    padding-bottom: 2rem;
+    @for $i from 1 through 3 {
+        &:nth-last-child(-n + 2) {
+            animation-delay: 500ms * $i;
+        }
+        animation: appearance 1s forwards;
+        @keyframes appearance {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
         h3 {
             font-style: normal;
             font-weight: 300;
@@ -134,7 +142,7 @@
             display: grid;
             border-radius: 0px 15px 15px 0px;
             margin-right: -4rem;
-            width: 4rem;
+            min-width: 4rem;
             transition: margin-right 500ms;
 
             & .fa-solid {
@@ -166,11 +174,7 @@
     justify-content: center;
 
     &__btn {
-        background: linear-gradient(
-            193.33deg,
-            $primary-color -11.44%,
-            $secondary-color 123.93%
-        );
+        background: $background-btn;
         font-weight: 500;
         font-size: 16px;
         @include text-center;
