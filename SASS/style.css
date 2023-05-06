@@ -290,7 +290,7 @@ span {
 .explore button {
   height: 50px;
   width: 219px;
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border: none;
@@ -303,7 +303,8 @@ span {
   font-size: 16px;
 }
 .explore button:hover {
-  background: linear-gradient(to top, rgb(147, 86, 255), rgba(255, 121, 218, 0.8));
+  background: linear-gradient(0deg, #9356dc -5%, #ff79da 95%);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .maincontent {
@@ -406,7 +407,7 @@ span {
 }
 .restaurants__card--txt .fas {
   color: transparent;
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
@@ -464,7 +465,8 @@ span {
   top: 23px;
   color: #353535;
   font-size: 18px;
-  height: 16px;
+  height: 25px;
+  width: 25px;
 }
 
 .banner img {
@@ -504,7 +506,7 @@ span {
 }
 .menu__title .fas {
   color: transparent;
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
@@ -726,7 +728,7 @@ span {
   justify-content: center;
 }
 .order__btn {
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
   font-weight: 500;
   font-size: 16px;
   text-align: center;
@@ -734,11 +736,10 @@ span {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   color: #ffffff;
-  width: 8.7vh;
   height: 3.1rem;
   cursor: pointer;
 }
 .order__btn:hover {
-  background: linear-gradient(to right top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(0deg, #9356dc -5%, #ff79da 95%);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
 }/*# sourceMappingURL=style.css.map */
