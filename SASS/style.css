@@ -266,7 +266,7 @@ span {
   align-items: center;
   background: #eaeaea;
   gap: 17px;
-  padding: 1.2rem;
+  padding: 1rem;
 }
 .location h4 {
   color: #353535;
@@ -278,14 +278,31 @@ span {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 1024px) {
+  .explore {
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
 .explore h2 {
   line-height: 32px;
   padding-top: 2rem;
+}
+@media (min-width: 1024px) {
+  .explore h2 br {
+    display: none;
+  }
 }
 .explore p {
   line-height: 23px;
   text-align: center;
   color: #353535;
+}
+@media (min-width: 1024px) {
+  .explore p br {
+    display: none;
+  }
 }
 .explore button {
   height: 50px;
@@ -306,6 +323,11 @@ span {
   background: linear-gradient(0deg, #9356dc -5%, #ff79da 95%);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
 }
+@media (min-width: 1024px) {
+  .explore button {
+    margin-top: 0;
+  }
+}
 
 .maincontent {
   display: flex;
@@ -313,8 +335,20 @@ span {
   background-color: #ffffff;
 }
 
+@media (min-width: 1024px) {
+  .function {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4rem;
+  }
+}
 .function h2 {
   padding: 2rem 1rem;
+}
+@media (min-width: 1024px) {
+  .function h2 {
+    padding: 2rem 0;
+  }
 }
 .function__btn {
   color: #000;
@@ -329,9 +363,16 @@ span {
 .function ol {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   counter-reset: numberlist;
   padding: 0 1rem 4rem 1.7rem;
+}
+@media (min-width: 1024px) {
+  .function ol {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 3rem 0.5rem;
+  }
 }
 .function li {
   display: flex;
@@ -342,6 +383,12 @@ span {
   padding: 1.5rem 2rem;
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 1024px) {
+  .function li {
+    width: 100%;
+    margin: 0;
+  }
 }
 .function li::before {
   display: grid;
@@ -371,11 +418,23 @@ span {
   background-color: #f6f6f6;
   padding: 2rem 1rem;
 }
+@media (min-width: 1024px) {
+  .restaurants {
+    padding: 2rem 4rem;
+  }
+}
 .restaurants-cards {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 2rem 0;
+}
+@media (min-width: 1024px) {
+  .restaurants-cards {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .restaurants__card {
   background: #ffffff;
@@ -446,6 +505,11 @@ span {
 .footer span {
   color: #ffffff;
 }
+@media (min-width: 1024px) {
+  .footer span {
+    padding-right: 3rem;
+  }
+}
 .footer a {
   font-style: normal;
   font-weight: 500;
@@ -456,6 +520,22 @@ span {
 }
 .footer li {
   line-height: 30px;
+}
+@media (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 60px 25px;
+    padding-bottom: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding-right: 5rem;
+  }
 }
 
 .header__btn .fa-arrow-left {
