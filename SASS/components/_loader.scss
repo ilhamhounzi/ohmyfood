@@ -6,16 +6,16 @@
     background: $white;
     opacity: 0.6;
     animation: disappear 2s forwards;
-    z-index: 1;
+    z-index: 100;
     inset: 0;
     pointer-events: none;
     animation-delay: 200ms;
 
     &-icon {
-        width: 3rem;
-        height: 3rem;
+        width: 6rem;
+        height: 6rem;
         border-radius: 50%;
-        border: 7px solid $black;
+        border: 7px solid $primary-color;
         border-right: 7px solid $white;
         animation: spin 700ms infinite;
     }

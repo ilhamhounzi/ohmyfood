@@ -194,7 +194,7 @@ span {
   opacity: 0.6;
   -webkit-animation: disappear 2s forwards;
           animation: disappear 2s forwards;
-  z-index: 1;
+  z-index: 100;
   inset: 0;
   pointer-events: none;
   -webkit-animation-delay: 200ms;
@@ -441,6 +441,9 @@ span {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
+.restaurants__card:hover {
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+}
 .restaurants__card img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -448,6 +451,9 @@ span {
   height: 200px;
   width: 100%;
   border-radius: 15px 15px 0px 0px;
+}
+.restaurants__card img:hover {
+  opacity: 0.8;
 }
 .restaurants__card--txt {
   position: relative;
@@ -557,6 +563,13 @@ span {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+}
+@media (min-width: 768px) {
+  .banner img {
+    height: 300px;
+    -o-object-position: 0;
+       object-position: 0;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
   .banner img {
@@ -823,7 +836,8 @@ span {
 .section__menu .card__item:active .card__item--check {
   margin-right: 0;
 }
-.section__menu .btn__order {
+
+.btn__order {
   align-content: center;
 }
 
