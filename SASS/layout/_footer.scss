@@ -10,8 +10,8 @@
     span {
         color: $white;
 
-        @media (min-width: 1024px) {
-            padding-right: 3rem;
+        @media (min-width: 1024px) and (max-width: 1440px) {
+            padding-right: 2rem;
         }
     }
 
@@ -28,14 +28,14 @@
     li {
         line-height: 30px;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px) and (max-width: 1440px) {
         display: flex;
         flex-direction: row-reverse;
         padding: 60px 25px;
         padding-bottom: 1.5rem;
     }
     ul {
-        @media (min-width: 1024px) {
+        @media (min-width: 1024px) and (max-width: 1440px) {
             display: flex;
             flex-direction: row;
             gap: 16px;

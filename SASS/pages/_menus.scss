@@ -20,6 +20,10 @@
         object-position: center bottom;
         object-fit: cover;
         display: block;
+        @media (min-width: 1024px) and (max-width: 1440px) {
+            height: 440px;
+            object-position: 0;
+        }
     }
 }
 
@@ -29,14 +33,24 @@
     margin-top: -3.3rem;
     position: sticky;
     padding: 2rem 1rem;
+ 
+
+    @media (min-width: 1024px) and (max-width: 1440px) {
+        padding: 2rem 11rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
 }
+
 .menu__title {
     padding-bottom: 2rem;
     @include flex-row;
     font-weight: 400;
     font-size: 28px;
     font-family: "Shrikhand", cursive;
-
+    @media (min-width: 1024px) and (max-width: 1440px) {
+        justify-content: center;
+    }
     & i {
         font-size: 22px;
         @include absolute;
@@ -44,6 +58,9 @@
         @include pointer;
         width: 35px;
         border-width: 1px;
+        @media (min-width: 1024px) and (max-width: 1440px) {
+            right: 10rem;
+        }
     }
 
     & .fas {
@@ -187,6 +204,7 @@
         color: $white;
         height: 3.1rem;
         cursor: pointer;
+        width: 12vh;
         &:hover {
             background: $background-btn-hover;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);

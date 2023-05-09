@@ -278,7 +278,7 @@ span {
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .explore {
     gap: 2rem;
     display: flex;
@@ -289,7 +289,7 @@ span {
   line-height: 32px;
   padding-top: 2rem;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .explore h2 br {
     display: none;
   }
@@ -299,7 +299,7 @@ span {
   text-align: center;
   color: #353535;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .explore p br {
     display: none;
   }
@@ -320,10 +320,10 @@ span {
   font-size: 16px;
 }
 .explore button:hover {
-  background: linear-gradient(0deg, #9356dc -5%, #ff79da 95%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .explore button {
     margin-top: 0;
   }
@@ -335,17 +335,17 @@ span {
   background-color: #ffffff;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .function {
     display: flex;
     flex-direction: column;
-    padding: 0 4rem;
+    padding: 0 10rem;
   }
 }
 .function h2 {
   padding: 2rem 1rem;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .function h2 {
     padding: 2rem 0;
   }
@@ -367,7 +367,7 @@ span {
   counter-reset: numberlist;
   padding: 0 1rem 4rem 1.7rem;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .function ol {
     display: flex;
     flex-direction: row;
@@ -384,7 +384,7 @@ span {
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .function li {
     width: 100%;
     margin: 0;
@@ -418,9 +418,9 @@ span {
   background-color: #f6f6f6;
   padding: 2rem 1rem;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .restaurants {
-    padding: 2rem 4rem;
+    padding: 2rem 10rem;
   }
 }
 .restaurants-cards {
@@ -429,10 +429,10 @@ span {
   gap: 1rem;
   padding: 2rem 0;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .restaurants-cards {
     display: grid;
-    gap: 3rem;
+    gap: 4rem;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -505,9 +505,9 @@ span {
 .footer span {
   color: #ffffff;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .footer span {
-    padding-right: 3rem;
+    padding-right: 2rem;
   }
 }
 .footer a {
@@ -521,7 +521,7 @@ span {
 .footer li {
   line-height: 30px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .footer {
     display: flex;
     flex-direction: row-reverse;
@@ -529,7 +529,7 @@ span {
     padding-bottom: 1.5rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   .footer ul {
     display: flex;
     flex-direction: row;
@@ -558,6 +558,13 @@ span {
      object-fit: cover;
   display: block;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .banner img {
+    height: 440px;
+    -o-object-position: 0;
+       object-position: 0;
+  }
+}
 
 .menu {
   background: #f7f7f7;
@@ -566,6 +573,13 @@ span {
   position: -webkit-sticky;
   position: sticky;
   padding: 2rem 1rem;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .menu {
+    padding: 2rem 11rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
 }
 
 .menu__title {
@@ -576,6 +590,11 @@ span {
   font-size: 28px;
   font-family: "Shrikhand", cursive;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .menu__title {
+    justify-content: center;
+  }
+}
 .menu__title i {
   font-size: 22px;
   position: absolute;
@@ -583,6 +602,11 @@ span {
   cursor: pointer;
   width: 35px;
   border-width: 1px;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .menu__title i {
+    right: 10rem;
+  }
 }
 .menu__title .fas {
   color: transparent;
@@ -818,8 +842,9 @@ span {
   color: #ffffff;
   height: 3.1rem;
   cursor: pointer;
+  width: 12vh;
 }
 .order__btn:hover {
-  background: linear-gradient(0deg, #9356dc -5%, #ff79da 95%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
 }/*# sourceMappingURL=style.css.map */
