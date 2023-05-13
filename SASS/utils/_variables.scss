@@ -3,13 +3,21 @@ $white: #ffffff;
 $light-grey: #eaeaea;
 $grey-explore: #f6f6f6;
 $dark-grey: #353535;
-$background-btn: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+$background-heart: linear-gradient(
+    to bottom,
+    #9356dc,
+    #b35cdc,
+    #cf64dc,
+    #e86edb,
+    #ff79da
+);
+
 $dark-white: #f7f7f7;
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 $black: #000;
-$background-btn-hover: linear-gradient(
+$background-btn: linear-gradient(
     0deg,
     rgba(147, 86, 220, 0.9),
     rgba(255, 121, 218, 0.9)

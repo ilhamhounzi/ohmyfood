@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
+/*Reset CSS*/
 html,
 div,
 span,
@@ -138,6 +139,8 @@ body {
   vertical-align: baseline;
 }
 
+/*Reset CSS*/
+/*styling title tags*/
 a {
   color: inherit;
   text-decoration: none;
@@ -179,12 +182,12 @@ p {
 
 span {
   font-family: "Shrikhand";
-  font-style: italic;
   font-weight: 400;
   font-size: 18px;
 }
 
 /*Couleurs*/
+/*loader styling*/
 .loader {
   display: flex;
   left: 0;
@@ -245,6 +248,8 @@ span {
     opacity: 0;
   }
 }
+/*End of loader styling*/
+/*Header section*/
 .header {
   background-color: #ffffff;
   display: flex;
@@ -267,6 +272,9 @@ span {
   position: relative;
 }
 
+/*End of Header section*/
+/*Homepage*/
+/*Location section*/
 .location {
   display: flex;
   flex-direction: row;
@@ -280,15 +288,15 @@ span {
   color: #353535;
 }
 
+/*Explore section*/
 .explore {
   background: #f6f6f6;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .explore {
-    gap: 2rem;
     display: flex;
     flex-direction: column;
   }
@@ -296,26 +304,23 @@ span {
 .explore h2 {
   line-height: 32px;
   padding-top: 2rem;
+  margin-bottom: 0.5rem;
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
-  .explore h2 br {
-    display: none;
+@media (min-width: 1024px) {
+  .explore h2 {
+    margin-bottom: 1.9rem;
   }
 }
 .explore p {
   line-height: 23px;
   text-align: center;
   color: #353535;
-}
-@media (min-width: 1024px) and (max-width: 1440px) {
-  .explore p br {
-    display: none;
-  }
+  margin-bottom: 1.75rem;
 }
 .explore button {
   height: 50px;
   width: 219px;
-  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border: none;
@@ -323,28 +328,33 @@ span {
   color: #ffffff;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
   margin-bottom: 2rem;
   font-size: 16px;
+  font-weight: 500;
   text-align: center;
+  transition: all 250ms ease-in-out;
 }
 .explore button:hover {
-  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  box-shadow: 10px 24px 28px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
+  transform: scale(1.05);
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .explore button {
     margin-top: 0;
   }
 }
 
+/*End of Explore section*/
+/*Section function & restaurant*/
 .maincontent {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
+  max-width: 1440px;
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+/*Function section*/
+@media (min-width: 1024px) {
   .function {
     display: flex;
     flex-direction: column;
@@ -354,7 +364,7 @@ span {
 .function h2 {
   padding: 2rem 1rem;
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .function h2 {
     padding: 2rem 0;
   }
@@ -369,9 +379,6 @@ span {
   align-items: center;
   background: #f7f7f7;
 }
-.function__btn:hover {
-  background-color: #efdfff;
-}
 .function ol {
   display: flex;
   flex-direction: column;
@@ -379,7 +386,7 @@ span {
   counter-reset: numberlist;
   padding: 0 1rem 4rem 1.7rem;
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .function ol {
     display: flex;
     flex-direction: row;
@@ -396,7 +403,7 @@ span {
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .function li {
     width: 100%;
     margin: 0;
@@ -426,11 +433,14 @@ span {
   color: #9356dc;
 }
 
+/*End of Function section*/
+/*list of restaurants*/
 .restaurants {
   background-color: #f6f6f6;
   padding: 2rem 1rem;
+  /*Restaurant cards*/
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .restaurants {
     padding: 2rem 10rem;
   }
@@ -441,7 +451,7 @@ span {
   gap: 1rem;
   padding: 2rem 0;
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .restaurants #restaurants-cards {
     display: grid;
     gap: 4rem;
@@ -453,9 +463,6 @@ span {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
-.restaurants__card:hover {
-  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
-}
 .restaurants__card img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -464,39 +471,37 @@ span {
   width: 100%;
   border-radius: 15px 15px 0px 0px;
 }
-.restaurants__card img:hover {
-  opacity: 0.8;
-}
 .restaurants__card--txt {
   position: relative;
   padding: 0.7rem;
+  /*Heart animated*/
 }
 .restaurants__card--txt h3,
 .restaurants__card--txt p {
   margin: 0.25rem;
 }
-.restaurants__card--txt .fa-heart {
+.restaurants__card--txt .home-heart {
   font-size: 22px;
   position: absolute;
-  right: 16px;
+  right: 1rem;
   top: 50%;
   transform: translateY(-50%);
 }
-.restaurants__card--txt .fas {
-  color: transparent;
-  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
+.restaurants__card--txt .home-heart:hover {
   transition: all 500ms ease-in-out;
-}
-.restaurants__card--txt .fas:hover {
+  display: inline-block;
   opacity: 1;
+  background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-weight: 900;
 }
-.restaurants__card--txt .new {
+.restaurants .novelty {
   position: relative;
 }
-.restaurants__card--txt .new::before {
+.restaurants .novelty::before {
   content: "Nouveau";
   position: absolute;
   height: 2rem;
@@ -511,6 +516,8 @@ span {
   top: 1rem;
 }
 
+/*End of Homepage*/
+/*Footer section*/
 .footer {
   display: flex;
   flex-direction: column;
@@ -519,11 +526,12 @@ span {
   gap: 16px;
   background: #353535;
   color: #ffffff;
+  max-width: 1440px;
 }
 .footer span {
   color: #ffffff;
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .footer span {
     padding-right: 2rem;
   }
@@ -539,7 +547,7 @@ span {
 .footer li {
   line-height: 30px;
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .footer {
     display: flex;
     flex-direction: row-reverse;
@@ -547,7 +555,7 @@ span {
     padding-bottom: 1.5rem;
   }
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .footer ul {
     display: flex;
     flex-direction: row;
@@ -556,6 +564,7 @@ span {
   }
 }
 
+/*End of Footer section*/
 .header__btn .fa-arrow-left {
   cursor: pointer;
   position: absolute;
@@ -567,6 +576,7 @@ span {
   width: 25px;
 }
 
+/*Hero banner*/
 .banner img {
   width: 100%;
   height: 275px;
@@ -583,7 +593,7 @@ span {
        object-position: 0;
   }
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .banner img {
     height: 440px;
     -o-object-position: 0;
@@ -591,6 +601,7 @@ span {
   }
 }
 
+/*Menu section*/
 .menu {
   background: #f7f7f7;
   border-radius: 40px 40px 0px 0px;
@@ -598,8 +609,9 @@ span {
   position: -webkit-sticky;
   position: sticky;
   padding: 2rem 1rem;
+  max-width: 1440px;
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .menu {
     padding: 2rem 11rem;
     margin-left: 10rem;
@@ -614,37 +626,42 @@ span {
   font-weight: 400;
   font-size: 28px;
   font-family: "Shrikhand", cursive;
+  /*Heart animated*/
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .menu__title {
     justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
 }
-.menu__title i {
-  font-size: 22px;
+.menu__title .menu-heart {
+  display: flex;
   position: absolute;
-  right: 17px;
+  right: 2rem;
+  font-size: 22px;
   cursor: pointer;
-  width: 35px;
-  border-width: 1px;
+  color: black;
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
-  .menu__title i {
-    right: 10rem;
+@media (min-width: 1024px) {
+  .menu__title .menu-heart {
+    position: inherit;
+    right: 0;
   }
 }
-.menu__title .fas {
-  color: transparent;
-  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
+.menu__title .menu-heart:hover {
   transition: all 500ms ease-in-out;
-}
-.menu__title .fas:hover {
+  display: inline-block;
   opacity: 1;
+  background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-weight: 900;
 }
 
+/*Entry & dishes & dessert*/
 .section__menu {
   gap: 1rem;
   display: flex;
@@ -857,7 +874,7 @@ span {
   justify-content: center;
 }
 .order__btn {
-  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   font-weight: 500;
   font-size: 16px;
   text-align: center;
@@ -868,8 +885,11 @@ span {
   height: 3.1rem;
   cursor: pointer;
   width: 12rem;
+  transition: all 250ms ease-in-out;
 }
 .order__btn:hover {
-  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  box-shadow: 10px 24px 28px rgba(0, 0, 0, 0.25);
-}/*# sourceMappingURL=style.css.map */
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/*Menu section*//*# sourceMappingURL=style.css.map */

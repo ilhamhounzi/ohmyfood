@@ -13,6 +13,7 @@
     }
 }
 
+/*Hero banner*/
 .banner {
     img {
         width: 100%;
@@ -24,21 +25,22 @@
             height: 300px;
             object-position: 0;
         }
-        @media (min-width: 1024px) and (max-width: 1440px) {
+        @media (min-width: 1024px) {
             height: 440px;
             object-position: 0;
         }
     }
 }
 
+/*Menu section*/
 .menu {
     background: $dark-white;
     border-radius: 40px 40px 0px 0px;
     margin-top: -3.3rem;
     position: sticky;
     padding: 2rem 1rem;
-
-    @media (min-width: 1024px) and (max-width: 1440px) {
+    max-width: 1440px;
+    @media (min-width: 1024px) {
         padding: 2rem 11rem;
         margin-left: 10rem;
         margin-right: 10rem;
@@ -51,34 +53,43 @@
     font-weight: 400;
     font-size: 28px;
     font-family: "Shrikhand", cursive;
-    @media (min-width: 1024px) and (max-width: 1440px) {
+    @media (min-width: 1024px) {
         justify-content: center;
+        align-items: center;
+        gap: 2rem;
     }
-    & i {
+    /*Heart animated*/
+    .menu-heart {
+        display: flex;
+        position: absolute;
+        right: 2rem;
         font-size: 22px;
-        @include absolute;
-        right: 17px;
         @include pointer;
-        width: 35px;
-        border-width: 1px;
-        @media (min-width: 1024px) and (max-width: 1440px) {
-            right: 10rem;
+        color: black;
+        @media (min-width: 1024px) {
+            position: inherit;
+            right: 0;
+        }
+        &:hover {
+            transition: all 500ms ease-in-out;
+            display: inline-block;
+            opacity: 1;
+            background: $background-heart;
+            background: -webkit-linear-gradient(
+                to bottom,
+                #9356dc,
+                #b35cdc,
+                #cf64dc,
+                #e86edb,
+                #ff79da
+            );
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
         }
     }
-
-    & .fas {
-        color: transparent;
-        background: $background-btn;
-        background-clip: text;
-        -webkit-background-clip: text;
-        opacity: 0;
-        transition: all 500ms ease-in-out;
-    }
-    & .fas:hover {
-        opacity: 1;
-    }
 }
-
+/*Entry & dishes & dessert*/
 .section__menu {
     gap: 1rem;
     @include flex-column;
@@ -113,7 +124,7 @@
             box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
             border-radius: 15px;
             @include pointer;
-      
+
             h4 {
                 font-family: "Roboto";
                 font-style: normal;
@@ -196,7 +207,6 @@
 .order {
     display: flex;
     justify-content: center;
-
     &__btn {
         background: $background-btn;
         font-weight: 500;
@@ -209,9 +219,11 @@
         height: 3.1rem;
         cursor: pointer;
         width: 12rem;
+        transition: all 250ms ease-in-out;
         &:hover {
-            background: $background-btn-hover;
-            box-shadow: 10px 24px 28px rgba(0, 0, 0, 0.25);
+            opacity: 0.9;
+            transform: scale(1.05);
         }
     }
 }
+/*Menu section*/

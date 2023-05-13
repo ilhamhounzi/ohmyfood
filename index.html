@@ -4,33 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Link of Kit FONTAWESOME-->
     <script src="https://kit.fontawesome.com/e598954635.js" crossorigin="anonymous"></script>
+    
+    <!--Link of feuille style css-->
     <link rel="stylesheet" href="/ohmyfood/SASS/style.css" />
         <title>OhMyFood</title>
   </head>
   <body>
+
+    <!--Loader div-->
 <div class="loader"><div class="loader-icon"></div></div>
+<!--End of loader div-->
+
+<!--Header Ohmyfood-->
     <header class="header">
+      <!--Logo-->
 <img src="/ohmyfood/assets/logo/ohmyfood.png" class="header__logo" alt="logo de Ohmyfood">
     </header>
+<!-- End of Ohmyfood header-->
 
+<!--ohmyfood location-->
     <div class="location">
   <i class="fa-solid fa-location-dot"></i>
       <p>Paris, Bellville</p>
     </div>
+<!--End of ohmyfood location-->
 
+<!--ohmyfood explore div-->
     <section class="explore">
-      
-      <h2>Réservez le menu qui <br>vous convient</h2>
-      <p>Découvrez des restaurants d'exception,<br>sélectionnés par nos soins.
+      <h2>Réservez le menu qui vous convient</h2>
+      <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.
       </p>
-
         <button><a href="#restaurants-cards">Explorer nos restaurants</a></button>
-       
     </section>
-<main class="maincontent">
-    <!-- Section Fonctionnement -->
+<!--End of ohmyfood explore div-->
 
+<!--Main of function & restaurant-->
+<main class="maincontent">
+
+    <!--Start of function section-->
     <nav class="function">
       <h2>Fonctionnement</h2>
       <ol>
@@ -48,43 +62,44 @@
         </li>
       </ol>
     </nav>
+  <!--End of function section-->
 
+  <!--Start of restaurant section-->
     <section class="restaurants">
       <h2>Restaurants</h2>
-      <div id="restaurants-cards">
-      <a href="/ohmyfood/restaurants/lapalettedugout.html" class="new">
-      <article class="restaurants__card">
 
+      <!--liste de cards restaurants-->
+
+      <div id="restaurants-cards">
+
+    <!--Card n°1-->
+      <a href="/ohmyfood/restaurants/lapalettedugout.html">
+        <div class="novelty"></div>
+      <article class="restaurants__card">
               <img src="/ohmyfood/assets/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant de la palette du goût" />
             <div class="restaurants__card--txt">
               <h3>La palette du gôut</h3>
               <p>Ménilmontant</p>
-              <i class="far fa-heart"></i>
-              <i class="fas fa-heart"></i>
+              <i class="fill far fa-heart fa-2x home-heart"></i>
       </div>
-    
-         
-       
-  
       </article>
-    
         </a>
 
-<a href="/ohmyfood/restaurants/lanoteenchante.html" class="new">
+    <!--Card n°2-->
+<a href="/ohmyfood/restaurants/lanoteenchante.html">
+  <div class="novelty"></div>
             <article class="restaurants__card">
                 <img src="/ohmyfood/assets/images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                   alt="Photo du restaurant de la note enchantée" />
                 <div class="restaurants__card--txt">
                   <h3>La note enchantée</h3>
                   <p>Charonne</p>
-                  <i class="far fa-heart"></i>
-                  <i class="fas fa-heart"></i>
+              <i class="fill far fa-heart fa-2x home-heart"></i>
               </div>
-                    
                       </article>
-                    
               </a>
          
+    <!--Card n°3-->
 <a href="/ohmyfood/restaurants/alafrançaise.html">
                 <article class="restaurants__card">
                     <img src="/ohmyfood/assets/images/stil-u2Lp8tXIcjw-unsplash.jpg"
@@ -92,29 +107,30 @@
                     <div class="restaurants__card--txt">
                       <h3>À la française</h3>
                       <p>Cité Rouge</p>
-                      <i class="far fa-heart"></i>
-                      <i class="fas fa-heart"></i>
+                    <i class="fill far fa-heart fa-2x home-heart"></i>
                   </div>
                           
                 </article>
                 </a>
-
+    <!--Card n°4-->
 <a href="/ohmyfood/restaurants/delicedusens.html">
                   <article class="restaurants__card">
                       <img src="/ohmyfood/assets/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant le délice des sens" />
                       <div class="restaurants__card--txt">
                         <h3>Le délice des sens</h3>
                         <p>Folie Méricourt</p>
-                        <i class="far fa-heart"></i>
-                      <i class="fas fa-heart"></i>
+                      <i class="fill far fa-heart fa-2x home-heart"></i>
                     </div>
                    
                   </article>
                   </a>
                   </div>
                     </section>
+                    <!--End of restaurant section-->
                   </main>
+<!-- End of main of function & restaurant-->
 
+<!--Ohmyfood footer-->
                   <footer class="footer">
                    <span>Ohmyfood</span>
                     <ul>
@@ -131,5 +147,6 @@
                                         Contact</a></li>
                     </ul>
                   </footer>
+                  <!--End of ohmyfood footer-->
   </body>
 </html>

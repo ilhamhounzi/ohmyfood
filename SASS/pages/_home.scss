@@ -1,3 +1,6 @@
+/*Homepage*/
+
+/*Location section*/
 .location {
     @include flex-row;
     @include position-center;
@@ -9,13 +12,13 @@
     }
 }
 
+/*Explore section*/
 .explore {
     background: $grey-explore;
     @include text-center;
     @include position-center;
-    @media (min-width: 1024px) and (max-width: 1440px) {
+    @media (min-width: 1024px) {
         & {
-            gap: 2rem;
             display: flex;
             flex-direction: column;
         }
@@ -23,23 +26,17 @@
     h2 {
         line-height: 32px;
         padding-top: 2rem;
-
-        @media (min-width: 1024px) and (max-width: 1440px) {
-            & br {
-                display: none;
-            }
+        margin-bottom: 0.5rem;
+        @media (min-width: 1024px) {
+            margin-bottom: 1.9rem;
         }
     }
 
-    p {
+    & p {
         line-height: 23px;
         @include text-center;
         color: $dark-grey;
-        @media (min-width: 1024px) and (max-width: 1440px) {
-            & br {
-                display: none;
-            }
-        }
+        margin-bottom: 1.75rem;
     }
 
     button {
@@ -52,37 +49,43 @@
         cursor: pointer;
         color: $white;
         @include position-center;
-        margin-top: 1rem;
         margin-bottom: 2rem;
         font-size: 16px;
+        font-weight: 500;
         text-align: center;
+        transition: all 250ms ease-in-out;
         &:hover {
-            background: $background-btn-hover;
-            box-shadow: 10px 24px 28px rgba(0, 0, 0, 0.25);
+            opacity: 0.9;
+            transform: scale(1.05);
         }
     }
-    @media (min-width: 1024px) and (max-width: 1440px) {
+    @media (min-width: 1024px) {
         button {
             margin-top: 0;
         }
     }
 }
+/*End of Explore section*/
+
+/*Section function & restaurant*/
 
 .maincontent {
     display: flex;
     flex-direction: column;
     background-color: $white;
+    max-width: 1440px;
 }
-
+/*Function section*/
 .function {
-    @media (min-width: 1024px) and (max-width: 1440px) {
+    @media (min-width: 1024px) {
         display: flex;
         flex-direction: column;
         padding: 0 10rem;
     }
+
     h2 {
         padding: 2rem 1rem;
-        @media (min-width: 1024px) and (max-width: 1440px) {
+        @media (min-width: 1024px) {
             padding: 2rem 0;
         }
     }
@@ -95,9 +98,10 @@
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
         align-items: center;
         background: $dark-white;
-        &:hover {
-            background-color: #efdfff;
-        }
+        //Hover effect
+        // &:hover {
+        //     background-color: #efdfff;
+        // }
     }
 
     ol {
@@ -105,7 +109,7 @@
         gap: 2rem;
         counter-reset: numberlist;
         padding: 0 1rem 4rem 1.7rem;
-        @media (min-width: 1024px) and (max-width: 1440px) {
+        @media (min-width: 1024px) {
             display: flex;
             flex-direction: row;
             padding: 0 0 3rem 0.5rem;
@@ -121,7 +125,7 @@
         padding: 1.5rem 2rem;
         border-radius: 20px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-        @media (min-width: 1024px) and (max-width: 1440px) {
+        @media (min-width: 1024px) {
             width: 100%;
             margin: 0;
         }
@@ -151,41 +155,47 @@
         color: $primary-color;
     }
 }
+/*End of Function section*/
 
+/*list of restaurants*/
 .restaurants {
     background-color: $grey-explore;
     padding: 2rem 1rem;
-    @media (min-width: 1024px) and (max-width: 1440px) {
+    @media (min-width: 1024px) {
         padding: 2rem 10rem;
     }
-     
+
     #restaurants-cards {
         @include flex-column;
         gap: 1rem;
         padding: 2rem 0;
 
-        @media (min-width: 1024px) and (max-width: 1440px) {
+        @media (min-width: 1024px) {
             display: grid;
             gap: 4rem;
             grid-template-columns: repeat(2, 1fr);
         }
     }
+
+    /*Restaurant cards*/
     &__card {
         background: $white;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         border-radius: 15px;
-        &:hover {
-            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
-        }
+        //Animation potentielle
+        // &:hover {
+        //     box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+        // }
         img {
             object-fit: cover;
             background-size: cover;
             height: 200px;
             width: 100%;
             border-radius: 15px 15px 0px 0px;
-            &:hover {
-                opacity: 0.8;
-            }
+            // Animation potentielle
+            // &:hover {
+            //    opacity: 0.8;
+            // }
         }
     }
     &__card--txt {
@@ -195,43 +205,52 @@
         p {
             margin: 0.25rem;
         }
-        .fa-heart {
+
+        /*Heart animated*/
+        .home-heart {
             font-size: 22px;
-            @include absolute;
-            right: 16px;
+            position: absolute;
+            right: 1rem;
             top: 50%;
             transform: translateY(-50%);
-        }
-        .fas {
-            color: transparent;
-            background: $background-btn;
-            background-clip: text;
-            -webkit-background-clip: text;
-            opacity: 0;
-            transition: all 500ms ease-in-out;
-
             &:hover {
+                transition: all 500ms ease-in-out;
+                display: inline-block;
                 opacity: 1;
-            }
-        }
-
-        .new {
-            @include relative;
-
-            &::before {
-                content: "Nouveau";
-                @include absolute;
-                height: 2rem;
-                width: 5rem;
-                background-color: $tertiary-color;
-                color: #008766;
-                font-weight: 500;
-                font-size: 14px;
-                display: grid;
-                place-items: center;
-                right: 1rem;
-                top: 1rem;
+                background: $background-heart;
+                background: -webkit-linear-gradient(
+                    to bottom,
+                    #9356dc,
+                    #b35cdc,
+                    #cf64dc,
+                    #e86edb,
+                    #ff79da
+                );
+                background-clip: text;
+                color: transparent;
+                font-weight: 900;
             }
         }
     }
+
+    .novelty {
+        @include relative;
+
+        &::before {
+            content: "Nouveau";
+            @include absolute;
+            height: 2rem;
+            width: 5rem;
+            background-color: $tertiary-color;
+            color: #008766;
+            font-weight: 500;
+            font-size: 14px;
+            display: grid;
+            place-items: center;
+            right: 1rem;
+            top: 1rem;
+        }
+    }
 }
+
+/*End of Homepage*/
