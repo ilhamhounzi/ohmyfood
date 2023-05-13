@@ -15,7 +15,9 @@ Nous souhaitons proposer à nos clients les menus de restaurants gastronomiques.
 En tant que développeuse junior au sein d'ohmyfood, ma mission est de développer un site “mobile first” qui répertorie les menus de restaurants gastronomiques.
 
 
+
 #Livrable attendu: 
+
 
 #Page d’accueil :
 
