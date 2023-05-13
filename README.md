@@ -16,7 +16,9 @@ En tant que développeuse junior au sein d'ohmyfood, ma mission est de développ
 
 
 
-#Livrable attendu: 
+
+
+Livrable attendu: 
 
 
 #Page d’accueil :
