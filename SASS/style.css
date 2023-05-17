@@ -1,3 +1,4 @@
+/*Couleurs*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
 /*Reset CSS*/
 html,
@@ -186,7 +187,70 @@ span {
   font-size: 18px;
 }
 
-/*Couleurs*/
+.heart {
+  font-size: 22px;
+  position: absolute;
+  color: black;
+  cursor: pointer;
+}
+.heart:hover {
+  transition: all 500ms ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-weight: 900;
+}
+
+.btn {
+  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+  color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-weight: 500;
+  border-radius: 25px;
+  font-size: 16px;
+  text-align: center;
+}
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+.header__btn .fa-arrow-left {
+  cursor: pointer;
+  position: absolute;
+  left: 23px;
+  top: 23px;
+  color: #353535;
+  font-size: 18px;
+  height: 25px;
+  width: 25px;
+}
+
+.novelty {
+  position: relative;
+}
+.novelty::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99e2d0;
+  color: #008766;
+  font-weight: 500;
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+}
+
 /*loader styling*/
 .loader {
   display: flex;
@@ -208,10 +272,6 @@ span {
           animation-delay: 200ms;
 }
 .loader-icon {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
@@ -320,23 +380,9 @@ span {
 .explore button {
   height: 50px;
   width: 219px;
-  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border: none;
-  cursor: pointer;
-  color: #ffffff;
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: center;
-  transition: all 250ms ease-in-out;
-}
-.explore button:hover {
-  opacity: 0.9;
-  transform: scale(1.05);
 }
 @media (min-width: 1024px) {
   .explore button {
@@ -480,40 +526,10 @@ span {
 .restaurants__card--txt p {
   margin: 0.25rem;
 }
-.restaurants__card--txt .home-heart {
-  font-size: 22px;
-  position: absolute;
+.restaurants__card--txt .heart {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-}
-.restaurants__card--txt .home-heart:hover {
-  transition: all 500ms ease-in-out;
-  display: inline-block;
-  opacity: 1;
-  background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  background: -webkit-linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-  font-weight: 900;
-}
-.restaurants .novelty {
-  position: relative;
-}
-.restaurants .novelty::before {
-  content: "Nouveau";
-  position: absolute;
-  height: 2rem;
-  width: 5rem;
-  background-color: #99e2d0;
-  color: #008766;
-  font-weight: 500;
-  font-size: 14px;
-  display: grid;
-  place-items: center;
-  right: 1rem;
-  top: 1rem;
 }
 
 /*End of Homepage*/
@@ -565,17 +581,6 @@ span {
 }
 
 /*End of Footer section*/
-.header__btn .fa-arrow-left {
-  cursor: pointer;
-  position: absolute;
-  left: 23px;
-  top: 23px;
-  color: #353535;
-  font-size: 18px;
-  height: 25px;
-  width: 25px;
-}
-
 /*Hero banner*/
 .banner img {
   width: 100%;
@@ -635,30 +640,14 @@ span {
     gap: 2rem;
   }
 }
-.menu__title .menu-heart {
-  display: flex;
-  position: absolute;
+.menu__title .heart {
   right: 2rem;
-  font-size: 22px;
-  cursor: pointer;
-  color: black;
 }
 @media (min-width: 1024px) {
-  .menu__title .menu-heart {
+  .menu__title .heart {
     position: inherit;
     right: 0;
   }
-}
-.menu__title .menu-heart:hover {
-  transition: all 500ms ease-in-out;
-  display: inline-block;
-  opacity: 1;
-  background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  background: -webkit-linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-  font-weight: 900;
 }
 
 /*Entry & dishes & dessert*/
@@ -865,31 +854,14 @@ span {
   margin-right: 0;
 }
 
-.btn__order {
-  align-content: center;
-}
-
 .order {
   display: flex;
   justify-content: center;
 }
-.order__btn {
-  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  font-weight: 500;
-  font-size: 16px;
-  text-align: center;
-  border: none;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  color: #ffffff;
+.order .btn {
   height: 3.1rem;
-  cursor: pointer;
   width: 12rem;
-  transition: all 250ms ease-in-out;
-}
-.order__btn:hover {
-  opacity: 0.9;
-  transform: scale(1.05);
+  align-content: center;
 }
 
 /*Menu section*//*# sourceMappingURL=style.css.map */
