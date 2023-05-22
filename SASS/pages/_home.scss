@@ -17,7 +17,7 @@
     background: $grey-explore;
     @include text-center;
     @include position-center;
-    @media (min-width: 1024px) {
+    @media (min-width: $breakpoint-destok) {
         & {
             display: flex;
             flex-direction: column;
@@ -27,7 +27,7 @@
         line-height: 32px;
         padding-top: 2rem;
         margin-bottom: 0.5rem;
-        @media (min-width: 1024px) {
+        @media (min-width: $breakpoint-destok) {
             margin-bottom: 1.9rem;
         }
     }
@@ -45,7 +45,7 @@
         @include position-center;
         margin-bottom: 2rem;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: $breakpoint-destok) {
         button {
             margin-top: 0;
         }
@@ -59,20 +59,21 @@
     display: flex;
     flex-direction: column;
     background-color: $white;
-    max-width: 1440px;
+    max-width: $max-destok;
+    margin: auto;
 }
 /*Function section*/
 .function {
-    @media (min-width: 1024px) {
+    @media (min-width: $breakpoint-destok) {
         display: flex;
         flex-direction: column;
         padding: 0 10rem;
     }
 
     h2 {
-        padding: 2rem 1rem;
-        @media (min-width: 1024px) {
-            padding: 2rem 0;
+        padding: 3rem 1rem;
+        @media (min-width: $breakpoint-destok) {
+            padding: 3rem 0;
         }
     }
     &__btn {
@@ -95,7 +96,7 @@
         gap: 2rem;
         counter-reset: numberlist;
         padding: 0 1rem 4rem 1.7rem;
-        @media (min-width: 1024px) {
+        @media (min-width: $breakpoint-destok) {
             display: flex;
             flex-direction: row;
             padding: 0 0 3rem 0.5rem;
@@ -111,7 +112,7 @@
         padding: 1.5rem 2rem;
         border-radius: 20px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-        @media (min-width: 1024px) {
+        @media (min-width: $breakpoint-destok) {
             width: 100%;
             margin: 0;
         }
@@ -146,9 +147,9 @@
 /*list of restaurants*/
 .restaurants {
     background-color: $grey-explore;
-    padding: 2rem 1rem;
-    @media (min-width: 1024px) {
-        padding: 2rem 10rem;
+    padding: 3rem 1rem;
+    @media (min-width: $breakpoint-destok) {
+        padding: 3rem 10rem;
     }
 
     #restaurants-cards {
@@ -156,47 +157,10 @@
         gap: 1rem;
         padding: 2rem 0;
 
-        @media (min-width: 1024px) {
+        @media (min-width: $breakpoint-destok) {
             display: grid;
             gap: 4rem;
             grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    /*Restaurant cards*/
-    &__card {
-        background: $white;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-        border-radius: 15px;
-        //Animation potentielle
-        // &:hover {
-        //     box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
-        // }
-        img {
-            object-fit: cover;
-            background-size: cover;
-            height: 200px;
-            width: 100%;
-            border-radius: 15px 15px 0px 0px;
-            // Animation potentielle
-            // &:hover {
-            //    opacity: 0.8;
-            // }
-        }
-    }
-    &__card--txt {
-        @include relative;
-        padding: 0.7rem;
-        h3,
-        p {
-            margin: 0.25rem;
-        }
-
-        /*Heart animated*/
-        .heart {
-            right: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
         }
     }
 }
