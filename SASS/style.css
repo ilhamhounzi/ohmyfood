@@ -1,52 +1,5 @@
-/*Couleurs*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
-/*styling title tags*/
-a {
-  color: inherit;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-h4,
-li {
-  font-style: normal;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-}
-
-h2 {
-  font-style: normal;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-}
-
-h3 {
-  font-style: normal;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-}
-
-p {
-  font-style: normal;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 17px;
-}
-
-span {
-  font-family: "Shrikhand";
-  font-weight: 400;
-  font-size: 18px;
-}
-
 /*Reset CSS*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
 html,
 div,
 span,
@@ -185,6 +138,53 @@ body {
   vertical-align: baseline;
 }
 
+/*Couleurs*/
+/*styling title tags*/
+a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+h4,
+li {
+  font-style: normal;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+h2 {
+  font-style: normal;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+h3 {
+  font-style: normal;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+p {
+  font-style: normal;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+span {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-size: 18px;
+}
+
 .heart {
   font-size: 22px;
   position: absolute;
@@ -313,6 +313,8 @@ body {
   background: #ffffff;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  margin: auto;
+  max-width: 1440px;
 }
 .restaurants__card img {
   -o-object-fit: cover;
@@ -436,6 +438,53 @@ body {
 }
 
 /*End of Header section*/
+/*Footer section*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px 20px;
+  gap: 16px;
+  background: #353535;
+  color: #ffffff;
+}
+.footer span {
+  color: #ffffff;
+}
+@media (min-width: 1024px) {
+  .footer span {
+    padding-right: 2rem;
+  }
+}
+.footer a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+.footer i {
+  width: 27px;
+}
+.footer li {
+  line-height: 30px;
+}
+@media (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 60px 25px;
+    padding-bottom: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding-right: 5rem;
+  }
+}
+
+/*End of Footer section*/
 /*Homepage*/
 /*Location section*/
 .location {
@@ -480,12 +529,14 @@ body {
   color: #353535;
   margin-bottom: 1.75rem;
 }
-.explore button {
+.explore .btn {
   height: 50px;
   width: 219px;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin-bottom: 2rem;
+  display: flex;
 }
 @media (min-width: 1024px) {
   .explore button {
@@ -499,7 +550,6 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-  max-width: 1440px;
 }
 
 /*Function section*/
@@ -642,6 +692,7 @@ body {
   position: sticky;
   padding: 2rem 1rem;
   max-width: 1440px;
+  margin: auto;
 }
 @media (min-width: 1024px) {
   .menu {
@@ -767,53 +818,4 @@ body {
 .order {
   display: flex;
   justify-content: center;
-}
-
-/*Footer section*/
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 22px 20px;
-  gap: 16px;
-  background: #353535;
-  color: #ffffff;
-  max-width: 1440px;
-}
-.footer span {
-  color: #ffffff;
-}
-@media (min-width: 1024px) {
-  .footer span {
-    padding-right: 2rem;
-  }
-}
-.footer a {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-}
-.footer i {
-  width: 27px;
-}
-.footer li {
-  line-height: 30px;
-}
-@media (min-width: 1024px) {
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 60px 25px;
-    padding-bottom: 1.5rem;
-  }
-}
-@media (min-width: 1024px) {
-  .footer ul {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    padding-right: 5rem;
-  }
-}
-
-/*End of Footer section*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
