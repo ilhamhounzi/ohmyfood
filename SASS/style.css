@@ -529,14 +529,13 @@ span {
   color: #353535;
   margin-bottom: 1.75rem;
 }
-.explore .btn {
+.explore button {
   height: 50px;
   width: 219px;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin-bottom: 2rem;
-  display: flex;
 }
 @media (min-width: 1024px) {
   .explore button {
