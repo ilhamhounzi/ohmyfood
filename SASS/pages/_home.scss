@@ -39,13 +39,12 @@
         margin-bottom: 1.75rem;
     }
 
-    .btn {
+    button {
         height: 50px;
         width: 219px;
         @include position-center;
         @include text-center;
         margin-bottom: 2rem;
-        display: flex;
     }
     @media (min-width: $breakpoint-destok) {
         button {
